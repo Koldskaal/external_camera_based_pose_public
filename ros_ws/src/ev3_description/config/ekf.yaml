@@ -1,0 +1,24 @@
+ekf_filter_node:
+    ros__parameters:
+        frequency: 20.0
+        two_d_mode: true
+        publish_acceleration: false
+        print_diagnostics: true
+        publish_tf: true
+        map_frame: map              # Defaults to "map" if unspecified
+        odom_frame: odom            # Defaults to "odom" if unspecified
+        base_link_frame: base_link  # Defaults to "base_link" ifunspecified
+        world_frame: odom           # Defaults to the value ofodom_frame if unspecified
+        # odom0: /nav_msgs/Odometry
+        # odom0_config: [true,  true,  false,
+        #                false, false, true,
+        #                false, false, false,
+        #                false, false, false,
+        #                false, false, false]
+        
+        odom0: /img_pose
+        odom0_config:   [true,  true,  false,
+                        false, false, true,
+                        false, false, false,
+                        false, false, false,
+                        false, false, false]
